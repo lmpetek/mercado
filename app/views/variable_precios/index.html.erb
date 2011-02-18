@@ -1,0 +1,23 @@
+<h1>Listing variable_precios</h1>
+
+<table>
+  <tr>
+    <th>Detalle</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @variable_precios.each do |variable_precio| %>
+  <tr>
+    <td><%= variable_precio.detalle %></td>
+    <td><%= link_to 'Show', variable_precio %></td>
+    <td><%= link_to 'Edit', edit_variable_precio_path(variable_precio) %></td>
+    <td><%= link_to 'Destroy', variable_precio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Variable precio', new_variable_precio_path %>

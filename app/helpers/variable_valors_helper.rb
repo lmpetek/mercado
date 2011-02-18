@@ -1,0 +1,2 @@
+module VariableValorsHelper
+end

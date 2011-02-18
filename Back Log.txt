@@ -1,0 +1,9 @@
+Mercado
+Requerimientos basicos - product backlog
+
+medición de referencia con otras empresas de un rubro específico.
+
+tenemos lo que se denominana variables de valor y variables de precio.
+tenemos empresas evaluadas del mismo rubro bajo los mismas variables de precio y valor.
+
+el soft debe poder recolectar todos estos datos de referencia para poder ubicar a la empresa objetivo en referencia a todas las otras.
