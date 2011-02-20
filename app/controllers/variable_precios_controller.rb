@@ -1,6 +1,10 @@
 class VariablePreciosController < ApplicationController
   # GET /variable_precios
   # GET /variable_precios.xml
+  
+  before_filter :authenticate_user!
+  
+  
   def index
     @variable_precios = VariablePrecio.all
 

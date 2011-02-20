@@ -1,6 +1,9 @@
 class VariableValorsController < ApplicationController
   # GET /variable_valors
   # GET /variable_valors.xml
+  
+  before_filter :authenticate_user!
+  
   def index
     @variable_valors = VariableValor.all
 
