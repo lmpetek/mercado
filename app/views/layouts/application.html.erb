@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Mercado</title>
-  <%= csrf_meta_tag %>
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->    
-  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-  <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
-</head>
-<body>
-	<% if user_signed_in? %>
-	  <div id="user_info">
-	    <%= current_user.try(:email) %> | <%= link_to 'Salir', destroy_user_session_path  %>
-	  </div>
-	<% end %>
-	
-	<div id="user_nav">
-	  <% if user_signed_in? %>
-	    Signed in as <%= current_user.email %>. Not you?
-	    <%= link_to "Salir", destroy_user_session_path %>
-	  <% else %>
-	    <%= link_to "Sign up", new_user_registration_path , :class => "signup_button round" %> or <%= link_to "sign in", new_user_session_path %>
-	  <% end %>
-	</div>
+  <head>
+    <title><%= title %></title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/stylesheets' %>
+  </head>
 
-<%= yield %>
-<%= link_to 'Principal', root_path %>
-</body>
+  <body>
+    <div class="container">
+      <%= render 'layouts/header' %>
+
+      <section class="round">
+      <%= yield %>
+      </section>
+
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+
 </html>

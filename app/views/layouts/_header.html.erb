@@ -1,0 +1,18 @@
+<header>
+  <% logo = image_tag("logo.png", :alt => "Modelo", :class => "round") %>
+  <%= link_to logo, root_path %>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "Principal", root_path %></li>
+      <li><%= link_to "Ayuda", help_path %></li>
+      <li>
+	  <% if user_signed_in? %>
+	    <%= current_user.email %> 
+	    <%= link_to "Salir", destroy_user_session_path %>
+	  <% else %>
+	    <%= link_to "Sign up", new_user_registration_path , :class => "signup_button round" %> or <%= link_to "sign in", new_user_session_path %>
+	  <% end %>
+	  </li>
+    </ul>
+  </nav>
+</header>
