@@ -1,5 +1,8 @@
 Mercado::Application.routes.draw do
-  # get "home/index"
+
+  get "pages/home"
+
+  get "pages/contact"
 
   resources :variable_precios
 
