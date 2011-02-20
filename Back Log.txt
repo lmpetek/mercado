@@ -3,7 +3,12 @@ Requerimientos basicos - product backlog
 
 medición de referencia con otras empresas de un rubro específico.
 
-tenemos lo que se denominana variables de valor y variables de precio.
+tenemos lo que se denomina variables de valor y variables de precio.
 tenemos empresas evaluadas del mismo rubro bajo los mismas variables de precio y valor.
 
 el soft debe poder recolectar todos estos datos de referencia para poder ubicar a la empresa objetivo en referencia a todas las otras.
+
+las empresas que son medidas, pasan a ser empresa para comparación?
+
+proyecto posee una empresa a evaluar y una colección de empresas para comparacion
+las empresas poseen variables de valor y variables de precio.
