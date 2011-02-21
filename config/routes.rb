@@ -1,4 +1,6 @@
 Mercado::Application.routes.draw do
+  resources :empresas
+
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'  
