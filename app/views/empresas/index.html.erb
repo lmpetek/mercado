@@ -13,8 +13,8 @@
 <% @empresas.each do |empresa| %>
   <tr>
     <td><%= empresa.detalle %></td>
-    <td><%= empresa.variable_precio_id %></td>
-    <td><%= empresa.variable_valor_id %></td>
+    <td><%= VariablePrecio.find(empresa.variable_precio_id).detalle %></td>
+    <td><%= VariableValor.find(empresa.variable_valor_id).detalle %></td>
     <td><%= link_to 'Show', empresa %></td>
     <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
     <td><%= link_to 'Destroy', empresa, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -7,12 +7,12 @@
 
 <p>
   <b>Variable precio:</b>
-  <%= @empresa.variable_precio_id %>
+  <%= VariablePrecio.find(@empresa.variable_precio_id).detalle %>
 </p>
 
 <p>
   <b>Variable valor:</b>
-  <%= @empresa.variable_valor_id %>
+  <%= VariableValor.find(@empresa.variable_valor_id).detalle %>
 </p>
 
 

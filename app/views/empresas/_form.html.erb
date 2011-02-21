@@ -17,11 +17,13 @@
   </div>
   <div class="field">
     <%= f.label :variable_precio_id %><br />
-    <%= f.text_field :variable_precio_id %>
+    <%= select("variable_precio", "variable_precio_id", VariablePrecio.all.collect{|e| [e.detalle, e.id]}, { :include_blank => false  } ) %>
+
   </div>
   <div class="field">
-    <%= f.label :variable_valor_id %><br />
-    <%= f.text_field :variable_valor_id %>
+    <%= f.label :variable_valor %><br />
+    <%= select("variable_valor", "variable_valor_id", VariableValor.all.collect{|e| [e.detalle, e.id]}, { :include_blank => false  } ) %>
+
   </div>
   <div class="actions">
     <%= f.submit %>
