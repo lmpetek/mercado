@@ -1,0 +1,16 @@
+<h1>Listado de Elementos</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Detalle:</b>
+  <%= @element.detalle %>
+</p>
+
+<p>
+  <b>Observacion:</b>
+  <%= @element.observacion %>
+</p>
+
+
+<%= link_to 'Editar', edit_element_path(@element) %> |
+<%= link_to 'Retroceder', elements_path %>

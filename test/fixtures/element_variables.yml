@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  element_id: 1
+  variable_precio_id: 1
+  variable_valor_id: 1
+  valor: 9.99
+  type: MyString
+
+two:
+  element_id: 1
+  variable_precio_id: 1
+  variable_valor_id: 1
+  valor: 9.99
+  type: MyString

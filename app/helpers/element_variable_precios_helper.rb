@@ -1,0 +1,2 @@
+module ElementVariablePreciosHelper
+end

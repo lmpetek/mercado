@@ -1,0 +1,29 @@
+<%= form_for(@valores_elementos_variable) do |f| %>
+  <% if @valores_elementos_variable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@valores_elementos_variable.errors.count, "error") %> prohibited this valores_elementos_variable from being saved:</h2>
+
+      <ul>
+      <% @valores_elementos_variable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :element_id %><br />
+    <%= f.text_field :element_id %>
+  </div>
+  <div class="field">
+    <%= f.label :variable_valor_id %><br />
+    <%= f.text_field :variable_valor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :variable_precio_id %><br />
+    <%= f.text_field :variable_precio_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<h1>Visualizacion de 'Valor de Elemento-Precio'</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Element:</b>
+  <%= @element_variable_precio.element.try(:detalle) %>
+</p>
+
+<p>
+  <b>Variable precio:</b>
+  <%= @element_variable_precio.variable_precio.try(:detalle) %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @element_variable_precio.valor %>
+</p>
+
+
+<%= link_to 'Editar', edit_element_variable_precio_path(@element_variable_precio) %> |
+<%= link_to 'Volver', element_variable_precios_path %>

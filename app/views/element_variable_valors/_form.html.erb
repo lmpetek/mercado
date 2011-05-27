@@ -1,0 +1,29 @@
+<%= form_for(@element_variable_valor) do |f| %>
+  <% if @element_variable_valor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@element_variable_valor.errors.count, "error") %> prohibited this element_variable_valor from being saved:</h2>
+
+      <ul>
+      <% @element_variable_valor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+       <%= f.label "Elemento" %><br />
+       <%= f.collection_select :element_id, Element.all, :id, :detalle, :prompt => true %>
+     </div>
+     <div class="field">
+       <%= f.label "Variable Precio" %><br />
+       <%= f.collection_select :variable_valor_id, VariableValor.all, :id, :detalle, :prompt => true %>
+     </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

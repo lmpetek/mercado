@@ -1,0 +1,32 @@
+<h1>Listado de Proyectos</h1>
+
+<table>
+  <tr>
+    <th>Empresa</th>
+    <th>Detalle</th>
+    <th>Fecha inicio</th>
+    <th>Fecha final</th>
+    <th>Responsables</th>
+    <th>Observaciones</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.empresa.try(:detalle) %></td>
+    <td><%= project.detalle %></td>
+    <td><%= project.fecha_inicio %></td>
+    <td><%= project.fecha_final %></td>
+    <td><%= project.responsables %></td>
+    <td><%= project.observaciones %></td>
+    <td><%= link_to 'Visualizar', project %></td>
+    <td><%= link_to 'Editar', edit_project_path(project) %></td>
+    <td><%= link_to 'Borrar', project, :confirm => 'Esta Seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Proyecto', new_project_path %>

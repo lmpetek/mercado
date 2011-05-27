@@ -1,0 +1,21 @@
+<h1>Visualizacion de 'Valor Elemento-Valor'</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Element:</b>
+  <%= @element_variable_valor.element_id %>
+</p>
+
+<p>
+  <b>Variable valor:</b>
+  <%= @element_variable_valor.variable_valor_id %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @element_variable_valor.valor %>
+</p>
+
+
+<%= link_to 'Editar', edit_element_variable_valor_path(@element_variable_valor) %> |
+<%= link_to 'Volver', element_variable_valors_path %>

@@ -1,0 +1,36 @@
+<h1>>Visualizacion de Proyectos</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Empresa:</b>
+  <%= @project.empresa.try(:detalle)%>
+</p>
+
+<p>
+  <b>Detalle:</b>
+  <%= @project.detalle %>
+</p>
+
+<p>
+  <b>Fecha inicio:</b>
+  <%= @project.fecha_inicio %>
+</p>
+
+<p>
+  <b>Fecha final:</b>
+  <%= @project.fecha_final %>
+</p>
+
+<p>
+  <b>Responsables:</b>
+  <%= @project.responsables %>
+</p>
+
+<p>
+  <b>Observaciones:</b>
+  <%= @project.observaciones %>
+</p>
+
+
+<%= link_to 'Editar', edit_project_path(@project) %> |
+<%= link_to 'Volver', projects_path %>

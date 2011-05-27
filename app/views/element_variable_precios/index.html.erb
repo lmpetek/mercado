@@ -1,0 +1,27 @@
+<h1>Listado de 'Valor de Elemento-Precio'</h1>
+
+<table>
+  <tr>
+    <th>Element</th>
+    <th>Variable precio</th>
+    <th>Valor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @element_variable_precios.each do |element_variable_precio| %>
+  <tr>
+    <td><%= element_variable_precio.element.try(:detalle)%></td>
+    <td><%= element_variable_precio.variable_precio.try(:detalle) %></td>
+    <td><%= element_variable_precio.valor %></td>
+    <td><%= link_to 'Visualizar', element_variable_precio %></td>
+    <td><%= link_to 'Editar', edit_element_variable_precio_path(element_variable_precio) %></td>
+    <td><%= link_to 'Borrar', element_variable_precio, :confirm => 'Esta Seguro?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Valor de Elemento-Precio', new_element_variable_precio_path %>

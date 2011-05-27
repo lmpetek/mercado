@@ -1,0 +1,27 @@
+<h1>Listing valores_elementos_variables</h1>
+
+<table>
+  <tr>
+    <th>Element</th>
+    <th>Variable valor</th>
+    <th>Variable precio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @valores_elementos_variables.each do |valores_elementos_variable| %>
+  <tr>
+    <td><%= valores_elementos_variable.element_id %></td>
+    <td><%= valores_elementos_variable.variable_valor_id %></td>
+    <td><%= valores_elementos_variable.variable_precio_id %></td>
+    <td><%= link_to 'Show', valores_elementos_variable %></td>
+    <td><%= link_to 'Edit', edit_valores_elementos_variable_path(valores_elementos_variable) %></td>
+    <td><%= link_to 'Destroy', valores_elementos_variable, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Valores elementos variable', new_valores_elementos_variable_path %>

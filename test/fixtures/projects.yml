@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  detalle: MyString
+  fecha_inicio: 2011-05-27
+  fecha_final: 2011-05-27
+  responsables: MyString
+  observaciones: MyText
+
+two:
+  detalle: MyString
+  fecha_inicio: 2011-05-27
+  fecha_final: 2011-05-27
+  responsables: MyString
+  observaciones: MyText
