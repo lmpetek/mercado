@@ -1,4 +1,4 @@
 class Empresa < ActiveRecord::Base
-  has_many :Projects
+  has_many :projects
   validates(:detalle, :presence => true)
 end
