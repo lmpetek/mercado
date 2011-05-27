@@ -3,25 +3,27 @@
 <table>
   <tr>
     <th>Detalle</th>
-    <th>Variable precio</th>
-    <th>Variable valor</th>
-    <th></th>
-    <th></th>
+    <th>Contacto</th>
+    <th>Telefono</th>
+    <th>Email</th>
+    <th>Observaciones</th>
     <th></th>
   </tr>
 
 <% @empresas.each do |empresa| %>
   <tr>
     <td><%= empresa.detalle %></td>
-    <td><%= VariablePrecio.find(empresa.variable_precio_id).detalle %></td>
-    <td><%= VariableValor.find(empresa.variable_valor_id).detalle %></td>
+    <td><%= empresa.contacto%></td>
+    <td><%= empresa.telefono%></td>
+    <td><%= empresa.email%></td>
+    <td><%= empresa.observaciones%></td>
     <td><%= link_to 'Show', empresa %></td>
     <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
-    <td><%= link_to 'Destroy', empresa, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', empresa, :confirm => 'Esta Seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Empresa', new_empresa_path %>
+<%= link_to 'Nueva Empresa', new_empresa_path %>

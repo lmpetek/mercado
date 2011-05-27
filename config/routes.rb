@@ -1,4 +1,14 @@
 Mercado::Application.routes.draw do
+  resources :element_variable_valors
+
+  resources :element_variable_precios
+
+  resources :valores_elementos_variables
+
+  resources :projects
+
+  resources :elements
+
   resources :empresas
 
   match '/contact', :to => 'pages#contact'

@@ -1,4 +1,4 @@
 class VariablePrecio < ActiveRecord::Base
-  has_many :empresas
+  belongs_to :project
   validates(:detalle, :presence => true)
 end

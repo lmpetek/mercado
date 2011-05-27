@@ -1,23 +1,24 @@
-<h1>Listing variable_precios</h1>
+<h1>Listado de Variable precio</h1>
 
 <table>
   <tr>
+    <th>Projecto</th>
     <th>Detalle</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Observaciones</th>
   </tr>
 
 <% @variable_precios.each do |variable_precio| %>
   <tr>
+    <td><%= variable_precio.project.try(:detalle)%></td>
     <td><%= variable_precio.detalle %></td>
-    <td><%= link_to 'Show', variable_precio %></td>
-    <td><%= link_to 'Edit', edit_variable_precio_path(variable_precio) %></td>
-    <td><%= link_to 'Destroy', variable_precio, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= variable_precio.observaciones %></td>
+    <td><%= link_to 'Visualizar', variable_precio %></td>
+    <td><%= link_to 'Editar', edit_variable_precio_path(variable_precio) %></td>
+    <td><%= link_to 'Borrar', variable_precio, :confirm => 'Esta Seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Variable precio', new_variable_precio_path %>
+<%= link_to 'Nueva Variable Precio', new_variable_precio_path %>

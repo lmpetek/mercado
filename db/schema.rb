@@ -10,7 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110221015153) do
+ActiveRecord::Schema.define(:version => 20110527201032) do
+
+  create_table "element_variables", :force => true do |t|
+    t.integer  "element_id"
+    t.integer  "variable_precio_id"
+    t.integer  "variable_valor_id"
+    t.decimal  "valor"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "elements", :force => true do |t|
+    t.string   "detalle"
+    t.text     "observacion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "Observacioens"
+  end
 
   create_table "empresas", :force => true do |t|
     t.string   "detalle"
@@ -18,6 +36,21 @@ ActiveRecord::Schema.define(:version => 20110221015153) do
     t.integer  "variable_valor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "contacto"
+    t.string   "telefono"
+    t.string   "email"
+    t.string   "observaciones"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "detalle"
+    t.date     "fecha_inicio"
+    t.date     "fecha_final"
+    t.string   "responsables"
+    t.text     "observaciones"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "empresa_id"
   end
 
   create_table "users", :force => true do |t|
@@ -43,12 +76,16 @@ ActiveRecord::Schema.define(:version => 20110221015153) do
     t.string   "detalle"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "observaciones"
+    t.decimal  "project_id"
   end
 
   create_table "variable_valors", :force => true do |t|
     t.string   "detalle"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "observaciones"
+    t.integer  "project_id"
   end
 
 end

@@ -1,10 +1,17 @@
+<h1>Visualizacion de Variable Valor</h1>
 <p id="notice"><%= notice %></p>
+
 
 <p>
   <b>Detalle:</b>
   <%= @variable_valor.detalle %>
 </p>
 
+<p>
+  <b>Detalle:</b>
+  <%= @variable_valor.project.try(:detalle)%></td>
+</p>
 
-<%= link_to 'Edit', edit_variable_valor_path(@variable_valor) %> |
-<%= link_to 'Back', variable_valors_path %>
+
+<%= link_to 'Editar', edit_variable_valor_path(@variable_valor) %> |
+<%= link_to 'Volver', variable_valors_path %>

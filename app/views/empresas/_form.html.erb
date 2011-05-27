@@ -12,18 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :detalle %><br />
+    <%= f.label "Nombre de la Empresa" %><br />
     <%= f.text_field :detalle %>
   </div>
   <div class="field">
-    <%= f.label :variable_precio_id %><br />
-    <%= f.select :variable_precio_id, VariablePrecio.all.collect{|e| [e.detalle, e.id]}, { :include_blank => false  }  %>
-
+    <%= f.label "Nombre del Contacto" %><br />
+    <%= f.text_field :contacto %>
   </div>
   <div class="field">
-    <%= f.label :variable_valor %><br />
-    <%= f.select :variable_valor_id, VariableValor.all.collect{|e| [e.detalle, e.id]}, { :include_blank => false  }  %>
-
+    <%= f.label "Telefonos" %><br />
+    <%= f.text_field :telefono %>
+  </div>
+    <div class="field">
+      <%= f.label "Direccion de Mail" %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :"Observaciones" %><br />
+      <%= f.text_field :observaciones %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>

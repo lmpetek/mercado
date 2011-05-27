@@ -1,3 +1,4 @@
+<h1>Listado de Empresas</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,13 +7,18 @@
 </p>
 
 <p>
-  <b>Variable precio:</b>
-  <%= VariablePrecio.find(@empresa.variable_precio_id).detalle %>
+  <b>Nombre Contacto:</b>
+  <%= @empresa.contacto %>
 </p>
 
 <p>
-  <b>Variable valor:</b>
-  <%= VariableValor.find(@empresa.variable_valor_id).detalle %>
+  <b>Telefonos:</b>
+  <%= @empresa.telefono %>
+</p>
+
+<p>
+  <b>Direccion de Email:</b>
+  <%= @empresa.email %>
 </p>
 
 
