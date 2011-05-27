@@ -20,6 +20,7 @@
     <td><%= link_to 'Show', empresa %></td>
     <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
     <td><%= link_to 'Destroy', empresa, :confirm => 'Esta Seguro?', :method => :delete %></td>
+    <td><%= link_to 'Proyectos', empresa_projects_path(empresa) %></td>
   </tr>
 <% end %>
 </table>

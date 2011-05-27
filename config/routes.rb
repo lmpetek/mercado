@@ -5,11 +5,13 @@ Mercado::Application.routes.draw do
 
   resources :valores_elementos_variables
 
-  resources :projects
+
 
   resources :elements
 
-  resources :empresas
+  resources :empresas do
+    resources :projects
+  end
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'

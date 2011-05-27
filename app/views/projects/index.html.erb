@@ -20,13 +20,13 @@
     <td><%= project.fecha_final %></td>
     <td><%= project.responsables %></td>
     <td><%= project.observaciones %></td>
-    <td><%= link_to 'Visualizar', project %></td>
-    <td><%= link_to 'Editar', edit_project_path(project) %></td>
-    <td><%= link_to 'Borrar', project, :confirm => 'Esta Seguro?', :method => :delete %></td>
+    <td><%= link_to 'Visualizar', [@empresa, project] %></td>
+    <td><%= link_to 'Editar', edit_empresa_project_path(@empresa, project) %></td>
+    <td><%= link_to 'Borrar', [@empresa, project], :confirm => 'Esta Seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Nuevo Proyecto', new_project_path %>
+<%= link_to 'Nuevo Proyecto', new_empresa_project_path(@empresa) %>

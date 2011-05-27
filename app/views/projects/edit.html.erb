@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Visualizar', @project %> |
-<%= link_to 'Volver', projects_path %>
+<%= link_to 'Visualizar', [@empresa, @project] %> |
+<%= link_to 'Volver', empresa_projects_path(@empresa) %>
