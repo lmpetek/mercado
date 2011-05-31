@@ -16,7 +16,7 @@
     <td><%= variable_valor.observaciones %></td>
     <td><%= link_to 'Visualizar', [@empresa, @project, variable_valor] %></td>
     <td><%= link_to 'Editar', edit_empresa_project_variable_valor_path(@empresa, @project, variable_valor) %></td>
-    <td><%= link_to 'Borrar', [@empresa, @project,variable_valor], :confirm => 'Esta Seguro?', :method => :delete %></td>
+    <td><%= link_to 'Borrar', [@empresa, @project,variable_valor] , :confirm => 'Esta Seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
@@ -24,4 +24,4 @@
 <br />
 
 <%= link_to 'Nueva Variable Valor',  new_empresa_project_variable_valor_path %>|
-<%= link_to 'Proyectos', empresa_projects_path %>
+<%= link_to 'Volver', empresa_projects_path %>

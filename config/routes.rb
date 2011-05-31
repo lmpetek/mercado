@@ -3,8 +3,6 @@ Mercado::Application.routes.draw do
 
   resources :element_variable_precios
 
-  resources :elements
-
   resources :empresas do
     resources :projects do
       resources :elements
