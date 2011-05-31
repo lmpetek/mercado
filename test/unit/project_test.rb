@@ -6,3 +6,19 @@ class ProjectTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: projects
+#
+#  id            :integer         not null, primary key
+#  detalle       :string(255)
+#  fecha_inicio  :date
+#  fecha_final   :date
+#  responsables  :string(255)
+#  observaciones :text
+#  created_at    :datetime
+#  updated_at    :datetime
+#  empresa_id    :integer
+#
+

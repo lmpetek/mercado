@@ -21,6 +21,28 @@
     <%= f.label :observacion %><br />
     <%= f.text_area :observacion %>
   </div>
+    <div class="field">
+      <h3>Subvariable Precio</h3>
+      <div id="element_variable_precio">
+        <%= f.fields_for :element_variable_precios do |element_variable_precio| %>
+          <%= render 'element_variable_precio_fields', :f => element_variable_precio %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association 'Agregar Elemento Subvariable Precio', f, :element_variable_precios %>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <h3>Subvariable Valor</h3>
+      <div id="element_variable_valor">
+        <%= f.fields_for :element_variable_valors do |element_variable_valor| %>
+          <%= render 'element_variable_valor_fields', :f => element_variable_valor %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association 'Agregar Elemento Subvariable Valor', f, :element_variable_valors %>
+        </div>
+      </div>
+    </div>
   <div class="actions">
     <%= f.submit %>
   </div>

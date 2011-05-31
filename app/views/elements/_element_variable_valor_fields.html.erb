@@ -1,0 +1,15 @@
+<div class="nested-fields">
+    <div class="field">
+    <%= f.label "Subvariable Valor" %><br />
+    <%= f.collection_select :variable_valor_id, VariableValor.all, :id, :detalle, :prompt => true %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%= link_to_remove_association "Borrar Subvariable Valor", f %>
+</div>
+
