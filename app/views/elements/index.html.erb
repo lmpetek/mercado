@@ -1,4 +1,5 @@
 <h1>Listado de Elementos</h1>
+<h3>Empresa  <%=@project.try(:detalle)%> projecto <%=@empresa.try(:detalle) %></h3>
 
 <table>
   <tr>
@@ -13,13 +14,14 @@
   <tr>
     <td><%= element.detalle %></td>
     <td><%= element.observacion %></td>
-    <td><%= link_to 'Visualizar', element %></td>
-    <td><%= link_to 'Editar', edit_element_path(element) %></td>
-    <td><%= link_to 'Borrar', element, :confirm => 'Esta Seguro?', :method => :delete %></td>
+    <td><%= link_to 'Visualizar', [@empresa, @project,element] %></td>
+    <td><%= link_to 'Editar', edit_empresa_project_element_path(@empresa, @project, element) %></td>
+    <td><%= link_to 'Borrar', [@empresa, @project,element], :confirm => 'Esta Seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Nuevo Elemento', new_element_path %>
+<%= link_to 'Nuevo Elemento', new_empresa_project_element_path(@empresa, @project) %>   |
+<%= link_to 'Proyectos', empresa_projects_path(@empresa) %>

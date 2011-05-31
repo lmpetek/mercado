@@ -1,4 +1,4 @@
-<%= form_for(@element) do |f| %>
+<%= form_for([@empresa, @project,@element]) do |f| %>
   <% if @element.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@element.errors.count, "error") %> prohibited this element from being saved:</h2>
@@ -10,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+
+<h3>Empresa  <%=@project.try(:detalle)%> projecto <%=@empresa.try(:detalle) %></h3>
 
   <div class="field">
     <%= f.label :detalle %><br />

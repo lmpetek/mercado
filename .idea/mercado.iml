@@ -18,7 +18,7 @@
     </requirement>
     <requirement>
       <requirement>
-        <dependency name="rails" version="3.0.3" bound="EQUAL" git="false" path="false" doRequire="true" />
+        <dependency name="rails" version="3.0.7" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="Gemfile" />
     </requirement>
@@ -63,6 +63,14 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] abstract (v1.0.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/abstract-1.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.5.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/i18n-0.5.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.3, C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/rails-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionmailer-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/activeresource-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] railties (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.7, C:/Ruby192/lib/ruby/gems/1.9.1/gems/activemodel-3.0.7)" level="application" />
   </component>
 </module>
 

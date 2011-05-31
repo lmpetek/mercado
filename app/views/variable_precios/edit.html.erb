@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Visualizar', @variable_precio %> |
-<%= link_to 'Volver', variable_precios_path %>
+<%= link_to 'Visualizar', [@empresa, @project,@variable_precio] %> |
+<%= link_to 'Volver', empresa_project_variable_precios_path(@empresa, @project) %>

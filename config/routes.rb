@@ -3,14 +3,14 @@ Mercado::Application.routes.draw do
 
   resources :element_variable_precios
 
-  resources :valores_elementos_variables
-
-
-
   resources :elements
 
   resources :empresas do
-    resources :projects
+    resources :projects do
+      resources :elements
+      resources :variable_precios
+      resources :variable_valors
+    end
   end
 
   match '/contact', :to => 'pages#contact'
@@ -25,9 +25,7 @@ Mercado::Application.routes.draw do
 #  get "pages/about"
 #  get "pages/help" 
   
-  resources :variable_precios
 
-  resources :variable_valors
 
   devise_for :users
 

@@ -1,8 +1,10 @@
 class ElementsController < ApplicationController
+  before_filter :find_empresa
+  before_filter :find_project
   # GET /elements
   # GET /elements.xml
   def index
-    @elements = Element.all
+    @elements =  @project.elements.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +15,7 @@ class ElementsController < ApplicationController
   # GET /elements/1
   # GET /elements/1.xml
   def show
-    @element = Element.find(params[:id])
+    @element =  @project.elements.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +26,7 @@ class ElementsController < ApplicationController
   # GET /elements/new
   # GET /elements/new.xml
   def new
-    @element = Element.new
+    @element = @project.elements.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +36,17 @@ class ElementsController < ApplicationController
 
   # GET /elements/1/edit
   def edit
-    @element = Element.find(params[:id])
+    @element =  @project.elements.find(params[:id])
   end
 
   # POST /elements
   # POST /elements.xml
   def create
-    @element = Element.new(params[:element])
+    @element = @project.elements.build(params[:element])
 
     respond_to do |format|
       if @element.save
-        format.html { redirect_to(@element, :notice => 'Element was successfully created.') }
+        format.html { redirect_to([@empresa, @project, @element], :notice => 'Element was successfully created.') }
         format.xml  { render :xml => @element, :status => :created, :location => @element }
       else
         format.html { render :action => "new" }
@@ -56,11 +58,11 @@ class ElementsController < ApplicationController
   # PUT /elements/1
   # PUT /elements/1.xml
   def update
-    @element = Element.find(params[:id])
+    @element =  @project.elements.find(params[:id])
 
     respond_to do |format|
       if @element.update_attributes(params[:element])
-        format.html { redirect_to(@element, :notice => 'Element was successfully updated.') }
+        format.html { redirect_to(current_empresa_and_proyect_path_for(@element), :notice => 'Element was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -72,12 +74,13 @@ class ElementsController < ApplicationController
   # DELETE /elements/1
   # DELETE /elements/1.xml
   def destroy
-    @element = Element.find(params[:id])
+    @element =  @project.elements.find(params[:id])
     @element.destroy
 
     respond_to do |format|
-      format.html { redirect_to(elements_url) }
+      format.html { redirect_to(current_empresa_and_proyect_path_for(@element)) }
       format.xml  { head :ok }
     end
   end
+
 end

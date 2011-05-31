@@ -1,8 +1,9 @@
 <h1>Listado de Proyectos</h1>
+<h3>Empresa <%=@empresa.try(:detalle)%></h3>
+
 
 <table>
   <tr>
-    <th>Empresa</th>
     <th>Detalle</th>
     <th>Fecha inicio</th>
     <th>Fecha final</th>
@@ -14,19 +15,22 @@
 
 <% @projects.each do |project| %>
   <tr>
-    <td><%= project.empresa.try(:detalle) %></td>
     <td><%= project.detalle %></td>
     <td><%= project.fecha_inicio %></td>
     <td><%= project.fecha_final %></td>
     <td><%= project.responsables %></td>
     <td><%= project.observaciones %></td>
-    <td><%= link_to 'Visualizar', [@empresa, project] %></td>
+    <td><%= link_to 'Ver', [@empresa, project] %></td>
     <td><%= link_to 'Editar', edit_empresa_project_path(@empresa, project) %></td>
     <td><%= link_to 'Borrar', [@empresa, project], :confirm => 'Esta Seguro?', :method => :delete %></td>
+    <td><%= link_to 'Elementos', empresa_project_elements_path(@empresa, project)%></td>
+    <td><%= link_to 'Var.Precio', empresa_project_variable_precios_path(@empresa, project)%></td>
+    <td><%= link_to 'Var.Valor', empresa_project_variable_valors_path(@empresa, project)%></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Nuevo Proyecto', new_empresa_project_path(@empresa) %>
+<%= link_to 'Nuevo Proyecto', new_empresa_project_path(@empresa) %>|
+<%= link_to 'Empresas', empresas_path() %>

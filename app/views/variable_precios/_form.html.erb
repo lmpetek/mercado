@@ -1,4 +1,4 @@
-<%= form_for(@variable_precio) do |f| %>
+<%= form_for( current_empresa_and_proyect_path_for(@variable_precio) ) do |f| %>
   <% if @variable_precio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@variable_precio.errors.count, "error") %> prohibited this variable_precio from being saved:</h2>

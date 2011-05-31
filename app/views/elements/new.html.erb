@@ -1,5 +1,5 @@
-<h1>Nuevo Elemento</h1>
+<h1>Nuevo Elemento para el projecto <%=@project.try(:detalle)%> de la empresa <%=@empresa.try(:detalle)%></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Retroceder', elements_path %>
+<%= link_to 'Volver', empresa_project_elements_path(@empresa,@project) %>
