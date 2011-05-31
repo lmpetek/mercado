@@ -17,9 +17,9 @@
     <td><%= empresa.telefono%></td>
     <td><%= empresa.email%></td>
     <td><%= empresa.observaciones%></td>
-    <td><%= link_to 'Show', empresa %></td>
-    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
-    <td><%= link_to 'Destroy', empresa, :confirm => 'Esta Seguro?', :method => :delete %></td>
+    <td><%= link_to 'Ver', empresa %></td>
+    <td><%= link_to 'Editar', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Borrar', empresa, :confirm => 'Esta Seguro?', :method => :delete %></td>
     <td><%= link_to 'Proyectos', empresa_projects_path(empresa) %></td>
   </tr>
 <% end %>
