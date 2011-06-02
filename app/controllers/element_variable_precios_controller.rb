@@ -47,7 +47,7 @@ class ElementVariablePreciosController < ApplicationController
 
     respond_to do |format|
       if @element_variable_precio.save
-        format.html { redirect_to([@empresa, @project, @element,@element_variable_precio, :notice => 'Element variable precio was successfully created.') }
+        format.html { redirect_to([@empresa, @project, @element,@element_variable_precio], :notice => 'Element variable precio was successfully created.') }
         format.xml  { render :xml => @element_variable_precio, :status => :created, :location => @element_variable_precio }
       else
         format.html { render :action => "new" }
