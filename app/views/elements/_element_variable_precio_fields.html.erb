@@ -6,7 +6,7 @@
         <th>&nbsp;</th>
       </tr>
       <tr>
-        <td><%= f.collection_select :variable_precio_id, VariablePrecio.all, :id, :detalle, :prompt => true %></td>
+        <td><%= f.collection_select :variable_precio_id, @project.variable_precios, :id, :detalle, :prompt => true %></td>
         <td><%= f.text_field :valor %></td>
         <td><%= link_to_remove_association "Borrar Subvariable Precio", f %></td>
       </tr>

@@ -12,6 +12,11 @@ class ApplicationController < ActionController::Base
     @project = @empresa.projects.find(params[:project_id])
   end
 
+  def find_element
+    raise "SE NECESITA UN Elemento!!!!!!!!!!!" if params[:element_id].blank?
+    @element = @projects.find(params[:element_id])
+  end
+
   def current_empresa_and_proyect_path_for(resource)
     [@empresa, @project, resource]
   end

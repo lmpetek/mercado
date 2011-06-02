@@ -1,6 +1,7 @@
 class ElementsController < ApplicationController
   before_filter :find_empresa
   before_filter :find_project
+
   # GET /elements
   # GET /elements.xml
   def index

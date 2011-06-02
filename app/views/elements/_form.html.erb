@@ -21,6 +21,8 @@
     <%= f.label :observacion %><br />
     <%= f.text_area :observacion %>
   </div>
+
+  <% if @project.variable_precios.count > 0 %>
     <div class="field">
       <h3>Subvariable Precio</h3>
       <div id="element_variable_precio">
@@ -32,6 +34,9 @@
         </div>
       </div>
     </div>
+  <% end  %>
+
+  <% if @project.variable_valors.count > 0 %>
     <div class="field">
       <h3>Subvariable Valor</h3>
       <div id="element_variable_valor">
@@ -43,7 +48,9 @@
         </div>
       </div>
     </div>
+  <% end  %>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

@@ -10,9 +10,10 @@
       </ul>
     </div>
   <% end %>
+
     <div class="field">
-      <%= f.label "Proyecto" %><br />
-      <%= f.collection_select :project_id, Project.all, :id, :detalle, :prompt => true %>
+      <h3>Empresa: <%= @empresa.detalle.titlecase %></h3>
+      <h3>Proyecto: <%= @project.detalle.titlecase %></h3>
     </div>
 
     <div class="field">

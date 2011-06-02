@@ -1,15 +1,12 @@
 Mercado::Application.routes.draw do
 
-  resources :element_variable_valors
-  resources :element_variable_precios
 
   resources :empresas do
     resources :projects do
-      resources :elements
-#      do
-#        resources :element_variable_valors
-#        resources :element_variable_precios
-#      end
+      resources :elements do
+        resources :element_variable_valors
+        resources :element_variable_precios
+      end
       resources :variable_precios
       resources :variable_valors
     end

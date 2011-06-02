@@ -86,6 +86,9 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] abstract (v1.0.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/abstract-1.0.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] i18n (v0.5.0, C:/Ruby192/lib/ruby/gems/1.9.1/gems/i18n-0.5.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] arel (v2.0.10, C:/Ruby192/lib/ruby/gems/1.9.1/gems/arel-2.0.10)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v3.0.3, C:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activemodel (v3.0.3, C:/Ruby192/lib/ruby/gems/1.9.1/gems/activemodel-3.0.3)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v3.0.3, C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3)" level="application" />
   </component>
 </module>
 

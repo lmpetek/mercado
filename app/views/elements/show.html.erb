@@ -12,8 +12,46 @@
   <b>Observacion:</b>
   <%= @element.observacion %>
 </p>
-
-
-
+<br />
+<hr align=left noshade size=10 width=50%>
+<b><i>Variables de Precio Asignadas</i></b>
+<table>
+  <tr>
+    <th>Detalle</th>
+    <th>Valor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @element.element_variable_precios.each do |e| %>
+    <tr>
+      <td><%= e.variable_precio.detalle %></td>
+      <td><%= e.valor %></td>
+    </tr>
+  <% end %>
+</table>
+<hr align=left noshade size=10 width=50%>
+<%if @element.element_variable_valors.count > 0 %>
+  <b><i>Variables de Valor Asignadas</i></b>
+  <table>
+    <tr>
+      <th>Detalle</th>
+      <th>Valor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+   <% @element.element_variable_valors.each do |e| %>
+      <tr>
+        <td><%= e.variable_valor.detalle %></td>
+        <td><%= e.valor %></td>
+      </tr>
+  <% end %>
+</table>
+<% else %>
+      <b><i>Sin Variables de Valor Asignadas</i></b>
+    <br />
+<%end%>
+<br />
 <%= link_to 'Editar', edit_empresa_project_element_path(@empresa, @project, @element) %> |
 <%= link_to 'Retroceder', empresa_project_elements_path(@empresa, @project) %>
