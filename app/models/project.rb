@@ -3,6 +3,10 @@ class Project < ActiveRecord::Base
   has_many :variable_precios
   has_many :variable_valors
   has_many :elements
+
+  validates_presence_of		    :detalle,															                  :message => "es un dato requerido"
+  validates_presence_of		    :responsables,															                          :message => "es un dato requerido"
+
 end
 
 # == Schema Information

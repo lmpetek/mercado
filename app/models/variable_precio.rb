@@ -1,6 +1,6 @@
 class VariablePrecio < ActiveRecord::Base
   belongs_to :project
-  validates(:detalle, :presence => true)
+  validates_presence_of		    :detalle,															                          :message => "es un dato requerido"
 end
 
 # == Schema Information

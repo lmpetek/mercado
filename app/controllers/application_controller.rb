@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_filter :authenticate_user!
+
   protect_from_forgery
   helper_method :current_empresa_and_proyect_path_for
   protected

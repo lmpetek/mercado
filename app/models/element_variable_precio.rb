@@ -1,6 +1,7 @@
 class ElementVariablePrecio < ElementVariable
   belongs_to :variable_precio
   belongs_to :element
+  validates_presence_of		    :valor,															                          :message => "es un dato requerido"
 end
 
 # == Schema Information

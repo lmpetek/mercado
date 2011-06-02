@@ -4,6 +4,8 @@ class Element < ActiveRecord::Base
   accepts_nested_attributes_for :element_variable_precios, :allow_destroy => true, :reject_if => :all_blank
   accepts_nested_attributes_for :element_variable_valors, :allow_destroy => true, :reject_if => :all_blank
 
+  validates_presence_of		    :detalle,															                  :message => "es un dato requerido"
+
 #  has_many :element_variable
 #  has_many :element_variable_precio, :class_name => "ElementVariable" :conditions => {:type => 'element_variable_precio'}
 #  has_many :element_variable_valor, :class_name => "ElementVariable" :conditions => {:type => 'element_variable_precio'}

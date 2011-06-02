@@ -1,9 +1,7 @@
 class EmpresasController < ApplicationController
   # GET /empresas
   # GET /empresas.xml
-  
-  before_filter :authenticate_user!
-  
+
   def index
     @empresas = Empresa.all
 

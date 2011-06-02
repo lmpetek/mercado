@@ -1,6 +1,10 @@
 class Empresa < ActiveRecord::Base
   has_many :projects
-  validates(:detalle, :presence => true)
+  validates_format_of			    :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :message => "direccion invalida"
+  validates_presence_of		    :detalle,															                          :message => "es un dato requerido"
+  validates_presence_of		    :contacto,															                        :message => "es un dato requerido"
+  validates_presence_of		    :Telefono,															                        :message => "es un dato requerido"
+
 end
 
 # == Schema Information
